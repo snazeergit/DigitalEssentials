@@ -11,6 +11,7 @@ public class WishMessageClient {
 		WishMessageGenerator bean = ctx.getBean("wmg", WishMessageGenerator.class);
 		String wishMessage = bean.getWishMessage();
 		System.out.println("Output: " + wishMessage);
+		System.out.println("Wish Message: " + wishMessage);
 		ctx.close();
 	}
 
