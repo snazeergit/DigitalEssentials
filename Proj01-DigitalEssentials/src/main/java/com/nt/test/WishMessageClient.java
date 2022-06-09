@@ -10,7 +10,7 @@ public class WishMessageClient {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/nt/cfgs/applicationcontext.xml");
 		WishMessageGenerator bean = ctx.getBean("wmg", WishMessageGenerator.class);
 		String wishMessage = bean.getWishMessage();
-		System.out.println("Result: " + wishMessage);
+		System.out.println("Wish message: " + wishMessage);
 		ctx.close();
 	}
 
