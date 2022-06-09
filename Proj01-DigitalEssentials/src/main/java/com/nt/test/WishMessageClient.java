@@ -1,10 +1,17 @@
 package com.nt.test;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.nt.beans.WishMessageGenerator;
+
 public class WishMessageClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/nt/cfgs/applicationcontext.xml");
+		WishMessageGenerator bean = ctx.getBean("wmg", WishMessageGenerator.class);
+		//String wishMessage = bean.getWishMessage();
+		//System.out.println("Result: " + wishMessage);
+		ctx.close();
 	}
 
 }
